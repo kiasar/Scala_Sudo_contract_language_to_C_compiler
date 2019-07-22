@@ -6,108 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6451b33e-cf05-45b6-b02a-f3cedc4b0c28" name="Default" comment="Sudo compiler with scala">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="6451b33e-cf05-45b6-b02a-f3cedc4b0c28" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$046b663c453742e3b89f$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$046b663c453742e3b89f.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$046b663c453742e3b89f.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$83c1b007a2ecc8b565eb$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$83c1b007a2ecc8b565eb.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$83c1b007a2ecc8b565eb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a42871d29f68082bac04$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a42871d29f68082bac04.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a42871d29f68082bac04.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ece10c04ee211a86e491$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ece10c04ee211a86e491.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ece10c04ee211a86e491.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eebefac794392e20655e$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eebefac794392e20655e.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eebefac794392e20655e.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/copmpiler-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/copmpiler-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/copmpiler-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/copmpiler-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-compile-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-compile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-optional.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-provided.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-runtime-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-runtime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-scala-tool.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-test-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-copmpiler-build-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/poroj/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/poroj/main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/poroj/main.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/AllDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/AllDef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ArgP$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ArgP$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ArgP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ArgP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ArgsP$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ArgsP$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ArgsP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ArgsP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Assign$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Assign$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Assign.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Assign.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DateP$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DateP$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DateP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DateP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Def$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Def$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Def.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Def.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DefFunc$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DefFunc$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DefFunc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DefFunc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DefTimeFunc$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DefTimeFunc$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DefTimeFunc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DefTimeFunc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DefVar$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DefVar$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DefVar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DefVar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DoubleP$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DoubleP$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DoubleP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DoubleP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Element.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Expr$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Expr$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Expr.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Expr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ExprInp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ExprInp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func1$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func1$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func2$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func2$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func3$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func3$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func4$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func4$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func5$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func5$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Func5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Func5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/FuncCall$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/FuncCall$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/FuncCall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/FuncCall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/FuncCallInp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/FuncCallInp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/IntP$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/IntP$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/IntP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/IntP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/MathP$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/MathP$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/MathP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/MathP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Name$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Name$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Name.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Name.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Number$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Number$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Number.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Number.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Parenthesis$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Parenthesis$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Parenthesis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Parenthesis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Program$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Program$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ProjectGenerator$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ProjectGenerator$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ProjectParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ProjectParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/TempExpr$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/TempExpr$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/TempExpr.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/TempExpr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/TempExprInp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/TempExprInp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/TypeP$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/TypeP$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/TypeP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/TypeP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/poroj/main.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -153,8 +54,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="94">
-                <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
+              <first_editor relative-caret-position="264">
+                <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
               </first_editor>
               <second_editor />
             </state>
@@ -189,8 +90,8 @@
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/poroj/Compiler.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/poroj/main.scala" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -389,7 +290,7 @@
       <workItem from="1532521052576" duration="5140000" />
       <workItem from="1532538454748" duration="1811000" />
       <workItem from="1532779070596" duration="309000" />
-      <workItem from="1563787729274" duration="1961000" />
+      <workItem from="1563787729274" duration="2444000" />
     </task>
     <task id="LOCAL-00001" summary="Sudo compiler with scala">
       <created>1532535476637</created>
@@ -398,11 +299,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532535476637</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="readme">
+      <created>1563791919929</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1563791919930</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66282000" />
+    <option name="totallyTimeSpent" value="66765000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -415,6 +323,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="sbt" order="9" />
@@ -483,7 +392,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sudo compiler with scala" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sudo compiler with scala" />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -618,8 +528,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="94">
-            <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
+          <first_editor relative-caret-position="264">
+            <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
           </first_editor>
           <second_editor />
         </state>

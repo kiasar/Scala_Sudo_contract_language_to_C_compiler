@@ -5,85 +5,144 @@ import scala.util.parsing.combinator._
   */
 
 trait Line
+
 sealed abstract class Element
+
 case class Name(name: String) extends Element
+
 case class Number(number: String) extends Element
+
 case class TypeP(typeP: String)
+
 case class Def(name: Name, allDef: AllDef) extends Line
+
 sealed abstract class AllDef
+
 case class DefFunc(inp: List[TypeP], out: TypeP) extends AllDef
+
 case class DefVar(typeP: TypeP) extends AllDef
+
 case class DefTimeFunc() extends AllDef
+
 case class Expr(exprInp: ExprInp)
+
 sealed abstract class ExprInp
+
 case class MathP(tempExpr: TempExpr, sig: String, expr: Expr) extends ExprInp
+
 case class TempExpr(tempExprImp: TempExprInp) extends ExprInp
+
 sealed abstract class TempExprInp
+
 case class IntP(element: Element) extends TempExprInp
+
 case class DoubleP(element: Element) extends TempExprInp
+
 case class DateP(name: Name) extends TempExprInp
+
 case class Parenthesis(expr: Expr) extends TempExprInp
-case class Assign(name: Name,expr: Expr) extends Line
-case class ArgP (expr: Expr)
-case class ArgsP (inp: List[ArgP])
+
+case class Assign(name: Name, expr: Expr) extends Line
+
+case class ArgP(expr: Expr)
+
+case class ArgsP(inp: List[ArgP])
+
 case class FuncCall(funcCallImp: FuncCallInp) extends TempExprInp with Line
+
 sealed abstract class FuncCallInp
+
 case class Func3(name: Name, argsP: ArgsP) extends FuncCallInp
+
 case class Func1() extends FuncCallInp
+
 case class Func2(argP: ArgP) extends FuncCallInp
+
 case class Func4(argP1: ArgP, argP2: ArgP) extends FuncCallInp
+
 case class Func5(st: String, argP1: ArgP, argP2: ArgP) extends FuncCallInp
+
 case class Program(line: Line)
 
-class ProjectParser extends RegexParsers{
+class ProjectParser extends RegexParsers {
   def spliter(types: List[Any], st: String): List[Any] = types match {
-    case ((st:String)~ typeP) :: rest => typeP :: spliter(rest,st)
-    case any => any }
+    case ((st: String) ~ typeP) :: rest => typeP :: spliter(rest, st)
+    case any => any
+  }
+
   def helpType(types: List[Any]): List[TypeP] = spliter(types, ",").map { case d: TypeP => d }
+
   def helpArg(types: List[Any]): List[ArgP] = spliter(types, ",").map { case d: ArgP => d }
 
   def name: Parser[Name] = """[a-z]+[a-z|0-9]*""".r ^^ Name
+
   def number: Parser[Number] = """[0-9]+|[0-9]+\.[0-9]*""".r ^^ Number
+
   def typeP: Parser[TypeP] = """Int|Date|Double|Contract""".r ^^ TypeP
+
   def defFunc: Parser[DefFunc] = "(" ~ typeP ~ rep("," ~ typeP) ~ ")" ~ "->" ~ typeP ^^ {
-    case "(" ~ first ~ after ~ ")" ~ "->" ~ ret => DefFunc(first :: helpType(after), ret) }
+    case "(" ~ first ~ after ~ ")" ~ "->" ~ ret => DefFunc(first :: helpType(after), ret)
+  }
+
   def defVar: Parser[DefVar] = typeP ^^ DefVar
+
   def defTimeFunc: Parser[DefTimeFunc] = "TimeFunc" ~ "(" ~ "Date" ~ ")" ~ "−|-".r ~ ">" ~ "Double" ^^ (_ => DefTimeFunc())
-  def defP: Parser[Def]= name ~ "::" ~ (defVar ||| defFunc ||| defTimeFunc) ^^ {
-    case start ~ "::" ~ end => Def(start,end) }
+
+  def defP: Parser[Def] = name ~ "::" ~ (defVar ||| defFunc ||| defTimeFunc) ^^ {
+    case start ~ "::" ~ end => Def(start, end)
+  }
+
   def intP: Parser[IntP] = (name | number) ^^ IntP
+
   def doubleP: Parser[DoubleP] = (name | number) ^^ DoubleP
+
   def dateP: Parser[DateP] = name ^^ DateP
-  def parenthesis: Parser[Parenthesis] = "(" ~ expr ~ ")" ^^ { case "(" ~ ex ~ ")" => Parenthesis(ex)}
+
+  def parenthesis: Parser[Parenthesis] = "(" ~ expr ~ ")" ^^ { case "(" ~ ex ~ ")" => Parenthesis(ex) }
+
   def expr: Parser[Expr] = (tempExpr ||| mathP) ^^ Expr
+
   def mathP: Parser[MathP] = tempExpr ~ ("*" | "/" | "+" | "-") ~ expr ^^ {
     case ex1 ~ "*" ~ ex2 => MathP(ex1, "*", ex2)
     case ex1 ~ "/" ~ ex2 => MathP(ex1, "/", ex2)
     case ex1 ~ "+" ~ ex2 => MathP(ex1, "+", ex2)
     case ex1 ~ "-" ~ ex2 => MathP(ex1, "-", ex2)
   }
+
   def tempExpr: Parser[TempExpr] = (funcCall | intP | doubleP | parenthesis | dateP) ^^ TempExpr
-  def assign: Parser[Assign] = name ~ "=" ~ expr ^^ { case name ~ "=" ~ ex => Assign(name, ex)}
+
+  def assign: Parser[Assign] = name ~ "=" ~ expr ^^ { case name ~ "=" ~ ex => Assign(name, ex) }
+
   def argP: Parser[ArgP] = expr ^^ ArgP
+
   def argsP: Parser[ArgsP] = argP ~ rep("," ~ argP) ^^ {
     case first ~ reap => ArgsP(first :: helpArg(reap))
   }
+
   def funcCall: Parser[FuncCall] = (func1 | func2 | func4 | func5 | func3) ^^ FuncCall
-  def func3: Parser[Func3] = name ~ "(" ~ argsP ~ ")" ^^ {case name ~ "(" ~ args ~ ")" => Func3(name, args)}
+
+  def func3: Parser[Func3] = name ~ "(" ~ argsP ~ ")" ^^ { case name ~ "(" ~ args ~ ")" => Func3(name, args) }
+
   def func1: Parser[Func1] = "one" ~ "(" ~ ")" ^^ (_ => Func1())
-  def func2: Parser[Func2] = "give" ~ "(" ~ argP ~ ")" ^^ {case "give" ~ "(" ~ arg ~ ")" => Func2(arg)}
-  def func4: Parser[Func4] = "mkdate" ~ "(" ~ argP ~ "," ~ argP ~ ")" ^^ {case "mkdate" ~ "(" ~ arg1 ~ "," ~ arg2 ~ ")" => Func4(arg1, arg2)}
-  def func5: Parser[Func5] = """scaleX|and|then|scale|truncate""".r ~ "(" ~ argP ~ "," ~ argP ~ ")" ^^ {
-    case name ~ "(" ~ arg1 ~ "," ~ arg2 ~ ")" => Func5(name, arg1, arg2)
-  }
+
+  def func2: Parser[Func2] = "give" ~ "(" ~ argP ~ ")" ^^ { case "give" ~ "(" ~ arg ~ ")" => Func2(arg) }
+
+  def func4: Parser[Func4] = "mkdate" ~ "(" ~ argP ~ "," ~ argP ~ ")" ^^ { case "mkdate" ~ "(" ~ arg1 ~ "," ~ arg2 ~ ")" => Func4(arg1, arg2) }
+
+  def func5: Parser[Func5] =
+    """scaleX|and|then|scale|truncate""".r ~ "(" ~ argP ~ "," ~ argP ~ ")" ^^ {
+      case name ~ "(" ~ arg1 ~ "," ~ arg2 ~ ")" => Func5(name, arg1, arg2)
+    }
+
   def program: Parser[Program] = (assign ||| funcCall ||| defP) ^^ Program
+
   def applyP(input: String): Any = parse(program, input) match {
     case Success(result, _) => result
-    case failure : NoSuccess => scala.sys.error(failure.msg)
+    case failure: NoSuccess => scala.sys.error(failure.msg)
   }
 }
 
-object ProjectGenerator{
+object ProjectGenerator {
   def generate(inp: Any): String = inp match {
     case inp: String => inp
     case Name(o) => o match {
@@ -134,7 +193,7 @@ object ProjectGenerator{
 }
 
 
-object main extends ProjectParser{
+object main extends ProjectParser {
   def main2(args: Array[String]): Unit = {
     val expr = applyP("f = arg1 - 363 * 24")
     println(expr)
@@ -146,11 +205,11 @@ object main extends ProjectParser{
     do {
       lst = lst :+ temp
       temp = scala.io.StdIn.readLine()
-    } while(!"END".equals(temp))
+    } while (!"END".equals(temp))
 
 
     temp = ""
-    for (temp2 <- lst){
+    for (temp2 <- lst) {
       if (temp2 != "") {
         val for_generate = applyP(temp2.trim)
         temp = temp + ProjectGenerator.generate(for_generate) + "\n"
@@ -160,7 +219,8 @@ object main extends ProjectParser{
     val lines: Array[String] = temp.split("\n")
 
 
-    println("""
+    println(
+      """
 
 #include <iostream>
 using namespace std;
@@ -223,22 +283,22 @@ Contract defscaleX(double d, Contract con){
 """
     )
 
-    var i=0
-    while(i < lines.length){
+    var i = 0
+    while (i < lines.length) {
       lines(i) match {
         case st0 if st0.contains("defscaleX") =>
           var tempS = ""
-          tempS += lines(i).substring(0,lines(i).indexOf(","))
+          tempS += lines(i).substring(0, lines(i).indexOf(","))
           tempS += "(today)"
-          tempS += lines(i).substring(lines(i).indexOf(","),lines(i).length)
+          tempS += lines(i).substring(lines(i).indexOf(","), lines(i).length)
           lines(i) = tempS
           i += 1
         case st if st.endsWith("{") =>
           var count = 1
-          printf(lines(i).substring(0,lines(i).indexOf("(")))
+          printf(lines(i).substring(0, lines(i).indexOf("(")))
           val str = lines(i).substring(lines(i).indexOf("("), lines(i).length)
           var j = 0
-          while(j < str.length){
+          while (j < str.length) {
             str.substring(j) match {
               case a if a.startsWith("int") =>
                 j += 3
@@ -251,19 +311,22 @@ Contract defscaleX(double d, Contract con){
               case any =>
                 printf("" + any.charAt(0))
                 j += 1
-            } }
+            }
+          }
           println
-          println("\treturn " + lines(i + 1).substring(lines(i+1).indexOf('=') + 1) + "; \n}")
-          lines(i)= ""
-          lines(i+1)= ""
+          println("\treturn " + lines(i + 1).substring(lines(i + 1).indexOf('=') + 1) + "; \n}")
+          lines(i) = ""
+          lines(i + 1) = ""
           i += 2
-        case _ => i += 1 }
+        case _ => i += 1
+      }
     }
 
     val temp3 = scala.io.StdIn.readLine().split(" ")
     val n = temp3(0).toInt
     val t = temp3(1).toInt
-    println(s"""
+    println(
+      s"""
 int main(){
   start = $t;
   double cons[$n] = {0};
@@ -271,16 +334,17 @@ int main(){
   today = i;
 			""")
 
-    for (temp2 <- lines){
+    for (temp2 <- lines) {
       if (temp2 != "") {
         println(temp2 + ";")
       }
     }
 
 
-    for (i <- 1 until n + 1){
+    for (i <- 1 until n + 1) {
       temp = scala.io.StdIn.readLine()
-      println(s"if(cons[${i-1}]<${temp}_name.getVal()) cons[${i-1}]=${temp}_name.getVal();") }
+      println(s"if(cons[${i - 1}]<${temp}_name.getVal()) cons[${i - 1}]=${temp}_name.getVal();")
+    }
 
 
     println("}\nlong double ret = 0;")

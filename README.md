@@ -28,47 +28,30 @@ now you that you have a general idea about it I will show you all the functions.
 
 ### The Grammar of the language:
 
-> <NAME>::=[[a-z]]+[[a-z | 0-9]]*
+```html
+<NAME>::=[[a-z]]+[[a-z | 0-9]]*
+<TYPE>::=[[Int | Double | Date | Contract]]
+<DEFFUNC>::=  ([[<TYPE>|<TYPE>[[,<TYPE>]]*]]) -><TYPE>
+<DEFVAR>::=<TYPE><DEF>::=<NAME>::[[<DEFVAR>|<DEFFUNC>|<DEFTIMEFUNC>]]
+<DEFTIMEFUNC>::=  TimeFunc (Date) -> Double
+<ASSIGN>::=<NAME>=<EXPR>
+<INT>::=[[<NAME>|[[0-9]]+]]
+<DOUBLE>::=[[<NAME>|[[0-9]]+.[[0-9]]*]]
+<DATE>::=<NAME>
+<EXPR>::=[[<INT>|<DATE>|<DOUBLE>]]
+<EXPR>::=<EXPR>[[* | + | - | /]]<EXPR>
+<EXPR>::=  (<EXPR>)
+<EXPR>::=<FUNCCALL>
+<ARGS>::=[[<ARG>|<ARG>[[,<ARG>]]*]]
+<ARG>::=<EXPR>
+<FUNCCALL>::=<NAME>(<ARGS>)
+<FUNCCALL>::=  mkdate(<ARG>,<ARG>)
+<FUNCCALL>::=[[and | or | then | scaleX | scale | truncate]](<ARG>,<ARG>)
+<FUNCCALL>::=  one()
+<FUNCCALL>::=  give(<ARG>)
+<PROGRAM>::=[[<ASSIGN>|<FUNCCALL>|<DEF>]]*
+```
 
-> <TYPE>::=[[Int | Double | Date | Contract]]
-
-> <DEFFUNC>::=  ([[<TYPE>|<TYPE>[[,<TYPE>]]*]]) -><TYPE>
-
-> <DEFVAR>::=<TYPE><DEF>::=<NAME>::[[<DEFVAR>|<DEFFUNC>|<DEFTIMEFUNC>]]
-
-> <DEFTIMEFUNC>::=  TimeFunc (Date) -> Double
-
-> <ASSIGN>::=<NAME>=<EXPR>
-
-> <INT>::=[[<NAME>|[[0-9]]+]]
-
-> <DOUBLE>::=[[<NAME>|[[0-9]]+.[[0-9]]*]]
-
-> <DATE>::=<NAME>
-
-> <EXPR>::=[[<INT>|<DATE>|<DOUBLE>]]
-
-> <EXPR>::=<EXPR>[[* | + | - | /]]<EXPR>
-
-> <EXPR>::=  (<EXPR>)
-
-> <EXPR>::=<FUNCCALL>
-
-> <ARGS>::=[[<ARG>|<ARG>[[,<ARG>]]*]]
-
-> <ARG>::=<EXPR>
-
-> <FUNCCALL>::=<NAME>(<ARGS>)
-
-> <FUNCCALL>::=  mkdate(<ARG>,<ARG>)
-
-> <FUNCCALL>::=[[and | or | then | scaleX | scale | truncate]](<ARG>,<ARG>)
-
-> <FUNCCALL>::=  one()
-
-> <FUNCCALL>::=  give(<ARG>)
-
-> <PROGRAM>::=[[<ASSIGN>|<FUNCCALL>|<DEF>]]*
 ## what does this code do?
 this Scala code will compile this language to a C++ code, so you can write your contract on that Sudo language then compile it to C++ and run it. for example if your code in this Sudo language is this:
 ```

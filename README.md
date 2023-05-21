@@ -2,32 +2,9 @@
 this is a Scala code that compiles a Sudo contract language to C++, you can use it for learning Scala and see some sample code.
 
 ## What is this Sudo language?
-This language is for defining contracts, let me give you some examples and after that show you all functions.
-###### Date: this is how you define a Date of "day 100" and "hour 16":
-    t1 :: Date
-    t1 = mkdate(100 ,  15)
-###### the difference of date: this is how you find the difference of two dates (the time from this date to that date):
-    # t1 and t2 are dates
-    d1 :: Int
-    d1 = diff( t1 ,  t2 )
-###### Contracts: Now! this is a contract that means "you must pay 100$ before the date t1":
-    c1  ::  Contract
-    c1 = zcb ( t1 ,  100)
-###### Scale: you can scale the amount of the money of a contract with this:
-    # c1 is a contract
-    scale (20 ,  c1)
-###### one: this is a contract with value 1$ and time = inf:
-    c1 :: Contract
-    c1 = one()
-###### give: will reverlce the costumer and the dealer of an contract:
-    # c1 is a contract
-    c2 :: Contract
-    c2 = give(c1)
-##### and other things like "and", "or", "then", "TimeFunc" and so on that is in this language.
-now you that you have a general idea about it I will show you all the functions. If you can read Persian so you can read the full descriptions of this Sudo Cotrant language in [here](https://d1b10bmlvqabco.cloudfront.net/attach/j7r7avrmonu3ul/hm63qs7fzfh1ep/jcly3wx21t9x/project_v5.pdf)
+This language is designed for contract definition. We'll first explore all the functions, followed by some examples.
 
 ### The Grammar of the language:
-
 ```html
 <NAME>::=[[a-z]]+[[a-z | 0-9]]*
 <TYPE>::=[[Int | Double | Date | Contract]]
@@ -51,6 +28,35 @@ now you that you have a general idea about it I will show you all the functions.
 <FUNCCALL>::=  give(<ARG>)
 <PROGRAM>::=[[<ASSIGN>|<FUNCCALL>|<DEF>]]*
 ```
+
+###### Date: this is how you define a Date of "day 100" and "hour 16":
+    t1 :: Date
+    t1 = mkdate(100 ,  15)
+###### the difference of date: this is how you find the difference of two dates (the time from this date to that date):
+    # t1 and t2 are dates
+    d1 :: Int
+    d1 = diff( t1 ,  t2 )
+###### Contracts: Now! this is a contract that means "you must pay 100$ before the date t1":
+    c1  ::  Contract
+    c1 = zcb ( t1 ,  100)
+###### Scale: you can scale the amount of the money of a contract with this:
+    # c1 is a contract
+    scale (20 ,  c1)
+###### Function: The amout of the money can be scaled by a function of time.
+    f : : TimeFunc ( Date ) −> Double
+    f = arg1 * 5 + 4
+    scaleX : : (TimeFunc , Contract ) −> Contract
+    c6 : : Contract
+    c6 = scaleX ( f , one ( ) )
+###### one: this is a contract with value 1$ and time = inf:
+    c1 :: Contract
+    c1 = one()
+###### give: will reverlce the costumer and the dealer of an contract:
+    # c1 is a contract
+    c2 :: Contract
+    c2 = give(c1)
+##### and other things like "and", "or", "then", "TimeFunc" and so on that is in this language.
+now you that you have a general idea about it I will show you all the functions. If you can read Persian so you can read the full descriptions of this Sudo Cotrant language in [here](https://d1b10bmlvqabco.cloudfront.net/attach/j7r7avrmonu3ul/hm63qs7fzfh1ep/jcly3wx21t9x/project_v5.pdf)
 
 ## what does this code do?
 this Scala code will compile this language to a C++ code, so you can write your contract on that Sudo language then compile it to C++ and run it. for example if your code in this Sudo language is this:
